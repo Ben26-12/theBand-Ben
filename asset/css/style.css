@@ -1,0 +1,470 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Lato, sans-serif;
+    scroll-behavior: smooth;
+}
+#main {
+    overflow: hidden;
+}
+#header {
+    position: fixed;
+    top: 0;
+    height: 46px;
+    background-color: #000000;
+    width: 100%;
+    z-index: 1;
+}
+.nav {
+    position: relative;
+    font-size: 0;
+    background-color: black;
+}
+.nav li {
+    display: inline-block;
+}
+.nav > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 0 24px;
+    line-height: 46px;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: block;
+}
+
+.nav > li:hover > a {
+    background-color: #ccc;
+    color: black;
+    transition: 0.2s;
+}
+.subnav {
+    /* position: absolute; */
+    display: none;
+}
+.ti-angle-down {
+    font-size: 12px;
+}
+.search-icon, .mobile-menu{
+    float: right;
+    position: absolute;
+    top: 0;
+    color: white;
+    right: 0;
+    padding: 16px 24px;
+    font-weight: 900 ;
+}
+.search-icon:hover {
+    background-color: #f44336;
+}
+.mobile-menu:hover {
+    background-color: #ccc;
+    color: black;
+}
+.subnav li {
+    display: block;
+    width: 160px;
+}
+.subnav li a {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+    display: block;
+    padding: 0px 16px;
+    line-height: 40px;
+}
+.more:hover > .subnav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.subnav li:hover > a {
+    background-color: #ccc;
+}
+#slider {
+    background-color: white;
+    margin-top: 46px;
+    padding-top: 50%;
+    width: 100%;
+    background-image: url("../img/Slider1/chicago.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+.slider-content {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 32px;
+    text-shadow: 0 0 6px black;
+}
+.slider-header {
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.slider-description {
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 15px;
+}
+.content-section {
+    background-color: white;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px 112px;
+    max-width: 100%;
+}
+.section-heading {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+.section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    margin: 15px 0;
+}
+.about-content {
+    text-align: justify;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+.member-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin: 32px 0;
+}
+p.member-name {
+    padding: 15px 0;
+    text-transform: capitalize;
+}
+img.member-img {
+    width: 60%;
+}
+#content .content-section:nth-child(2) {
+    background-color: black;
+    margin: 0;
+    width: 100%;
+    color: white;
+}
+ul.ticket-wrapper {
+    background-color: white;
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 32px;
+}
+.ticket-list {
+    color: black;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    font-size: 15px;
+    list-style: none;
+}
+p.ticket-status {
+    display: inline;
+    padding: 0 8px;
+    background-color: rgb(244, 67, 54);
+    color: white;
+    margin-left: 16px;
+    opacity: unset !important;
+}
+p.month {
+    display: inline;
+    opacity: 0.6;
+}
+.ticket-wrapper .ticket-list:nth-child(3) .ticket-status {
+    float: right;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 16px;
+    padding: 0 8px;
+    line-height: 25px;
+    margin-top: -4px;
+}
+.place-wrapper {
+    display: flex;
+    max-width: 768px;
+    gap: 16px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.place-content {
+    background-color: white;
+    color: black;
+    padding: 0 16px;
+}
+.place-img {
+    width: 100%;
+    display: block;
+}
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-name {
+    padding: 15px 0;
+    font-weight: 700;
+}
+
+.place-time {
+    padding: 15px 0;
+    opacity: 0.6;
+}
+
+.place-description {
+    padding: 15px 0;
+    line-height: 1.4;
+}
+
+.buy-btn {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.buy-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 32px 0;
+}
+.contact-info {
+    width: 50%;
+}
+.contact-form {
+    width: 50%;
+    overflow: hidden;
+}
+input[placeholder="Message"] {
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    padding: 8px;
+}
+input[placeholder="Name"], [placeholder="Email"]{
+    width: 50%;
+    display: inline;
+    padding: 8px;
+}
+.row1 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: 40px;
+}
+.row2 {
+    height: 40px;
+}
+p.contact-list {
+    line-height: 1.8;
+}
+.contact-list a {
+    opacity: 0.7;
+}
+.contact-list a:hover {
+    opacity: 0.5;
+}
+.contact-info i {
+    padding-right: 20px;
+}
+button#send-btn {
+    font-size: 15px;
+    padding: 8px 16px;
+    margin-top: 32px;
+    background-color: black;
+    color: white;
+    float: right;
+    text-transform: uppercase;
+    border: none;
+}
+#send-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.map-img {
+    width: 100%;
+}
+div#footer {
+    padding: 64px 16px;
+}
+.channel, .brandmark {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    opacity: 0.6;
+}
+.brandmark > a {
+    color: unset;
+    padding: 5px;
+}
+.brandmark a:hover {
+    opacity: 0.6;
+}
+.channel {
+    font-size: 24px;
+}
+.channel i {
+    padding: 7px;
+}
+.channel > i:hover {
+    opacity: 0.6;
+}
+.brandmark {
+    font-size: 15px;
+    margin: 15px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-container {
+    background-color: white;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    margin-right: auto;
+    margin-left: auto;
+    animation: modalanimation ease 0.5s;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+header.modal-header {
+    background-color: rgb(0, 150, 136);
+    text-align: center;
+}
+p.header-content {
+    padding: 42px 16px;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: white;
+}
+.close-icon {
+    float: right;
+    padding: 12px;
+    color: white;
+    font-size: 12px;
+}
+.icon-header {
+    margin-right: 10px;
+}
+.close-icon:hover {
+    background-color: #ccc;
+    color: black;
+}
+.modal-body {
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+.modal-label {
+    margin: 16px 0;
+}
+.modal-input {
+    margin-top: -6px;
+    padding: 8px;
+    font-size: 15px;
+}
+button#pay-btn {
+    background-color: rgb(0, 150, 136);
+    border: none;
+    color: white;
+    padding: 16px;
+    margin: 16px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+#pay-btn:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+p.footer-content {
+    float: right;
+    margin-right: 12px;
+    font-size: 15px;
+    margin: 15px 16px;
+}
+.footer-content > a {
+    color: #2196F3;
+}
+.modal.open {
+    display: flex;
+}
+#header.menu-toggle-mobile {
+    overflow: visible;
+}
+@keyframes modalanimation {
+    from {
+        transform: translateY(-140px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+
+.left-to-right {
+    transition: 1s;
+    transform: translateX(-200%);
+}
+.left-to-right.start {
+    transform: translateX(0%);
+}
+.right-to-left {
+    transition: 1s;
+    transform: translateX(200%);
+}
+.right-to-left.start {
+    transform: translateX(0%);
+}
+.scale {
+    transition: 1s;
+    transform: scale(0);
+    opacity: 0;
+}
+.scale.start {
+    transform: scale(1);
+    opacity: 1;
+}
